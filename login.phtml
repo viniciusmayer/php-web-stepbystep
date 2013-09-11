@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <h3>Login</h3>
+        <span style="color:red"><?php echo $mensagem; ?></span>
+        <br />
+        <br />
+        <form action="index.php?page=login" method="POST">
+            <span>Email:</span><input id="email" name="email" type="text"/>
+            <br />
+            <span>Senha:</span><input id="senha" name="senha" type="password"/>
+            <br />
+            <br />
+            <input type="submit" value="Login"/><a href="index.phtml">Cancelar</a>
+        </form>
+    </body>
+</html>
