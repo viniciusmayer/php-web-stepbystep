@@ -13,7 +13,7 @@ final class Index {
         require_once $classes[$name];
     }
     
-    function run() {
+    function execute() {
         $page = $_REQUEST["page"];
         switch ($page) {
             case "login":
@@ -29,4 +29,4 @@ final class Index {
 
 $index = new Index();
 $index->init();
-$index->run();
+$index->execute();
