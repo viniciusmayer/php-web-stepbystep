@@ -9,6 +9,7 @@ final class Index {
     function loadClass($name) {
         $classes = array(
             'LoginAction' => 'action/LoginAction.php',
+            'EsqueciMinhaSenhaAction' => 'action/EsqueciMinhaSenhaAction.php',
         );
         require_once $classes[$name];
     }
@@ -18,6 +19,10 @@ final class Index {
         switch ($page) {
             case "login":
                 $action = new LoginAction();
+                $action->execute();
+                break;
+            case "esqueciminhasenha":
+                $action = new EsqueciMinhaSenhaAction();
                 $action->execute();
                 break;
             default:

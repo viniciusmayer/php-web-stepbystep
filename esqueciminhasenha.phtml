@@ -2,20 +2,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
+        <title>Esqueci minha senha</title>
     </head>
     <body>
-        <h3>Login</h3>
+        <h3>Esqueci minha senha</h3>
         <span style="color:red"><?php echo $mensagem; ?></span>
         <br />
         <br />
-        <form action="index.php?page=login" method="POST">
+        <form action="index.php?page=esqueciminhasenha" method="POST">
             <span>Email:</span><input id="email" name="email" type="text"/>
             <br />
-            <span>Senha:</span><input id="senha" name="senha" type="password"/>
             <br />
-            <br />
-            <input type="submit" value="Login"/><a href="esqueciminhasenha.phtml">Esqueci minha senha</a><a href="index.phtml">Cancelar</a>
+            <input type="submit" value="Enviar"/><a href="login.phtml">Cancelar</a>
         </form>
     </body>
 </html>
