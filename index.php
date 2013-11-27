@@ -8,7 +8,11 @@ final class Index {
 
     function loadClass($name) {
         $classes = array(
-            'LoginAction' => 'action/LoginAction.php',
+            'LoginAction' => 'action/LoginAction.php',            
+            'ListarUsuariosAction' => 'action/ListarUsuariosAction.php',
+            'CriarUsuarioAction' => 'action/CriarUsuarioAction.php',
+            'SalvarUsuarioAction' => 'action/SalvarUsuarioAction.php',
+            'UsuarioDAO' => 'dao/UsuarioDAO.php',
         );
         require_once $classes[$name];
     }
@@ -18,6 +22,18 @@ final class Index {
         switch ($page) {
             case "login":
                 $action = new LoginAction();
+                $action->execute();
+                break;
+            case "listarusuarios":
+                $action = new ListarUsuariosAction();
+                $action->execute();
+                break;
+            case "criarusuario":
+                $action = new CriarUsuarioAction();
+                $action->execute();
+                break;
+            case "salvarusuario":
+                $action = new SalvarUsuarioAction();
                 $action->execute();
                 break;
             default:

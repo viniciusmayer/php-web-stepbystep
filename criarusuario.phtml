@@ -6,12 +6,11 @@
     </head>
     <body>
         <h3>Criar usuario</h3>
-        <form action="listarusuarios.phtml" method="POST">
-            <span>Email:</span><input id="email" name="email" type="text"/>
-            <br />
-            <span>Senha:</span><input id="senha" name="senha" type="password"/>
-            <br />
-            <span>Confirmar senha:</span><input id="confirmarsenha" name="confirmarsenha" type="password"/>
+        <span style="color:red"><?php echo $mensagem; ?></span>
+        <br />
+        <br />
+        <form action="index.php?page=salvarusuario" method="POST">
+            <span>Numero:</span><input id="numero" name="numero" type="number"/>
             <br />
             <br />
             <input type="submit" value="Salvar"/><a href="listarusuarios.phtml">Cancelar</a>

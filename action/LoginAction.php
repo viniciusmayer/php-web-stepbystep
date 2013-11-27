@@ -20,7 +20,7 @@ class LoginAction {
             return;
         }
 
-        require __DIR__ . "/../listarusuarios.phtml";
-        return;
+        header("Location: index.php?page=listarusuarios");
+        die();
     }
 }

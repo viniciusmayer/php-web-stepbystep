@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Listar usuarios</title>
+        <script src="js/scripts.js"></script>
     </head>
     <body>
         <h3>Listar usuarios</h3>
@@ -11,28 +12,21 @@
             <th>Email</th>
             <th>Senha</th>
             <th>Acoes</th>
-            <tr>
-                <td>1</td>
-                <td>usuario 1</td>
-                <td>senha 1</td>
-                <td>
-                    <a href="editarusuario.phtml">Editar</a>
-                    <a href="listarusuarios.phtml">Deletar</a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>usuario 2</td>
-                <td>senha 2</td>
-                <td>
-                    <a href="editarusuario.phtml">Editar</a>
-                    <a href="listarusuarios.phtml">Deletar</a>
-                </td>
-            </tr>
+            <?php foreach ($numeros as $n) { ?>
+                <tr>
+                    <td><?php echo $n; ?></td>
+                    <td>usuario <?php echo $n; ?></td>
+                    <td>senha <?php echo $n; ?></td>
+                    <td>
+                        <a href="editarusuario.phtml">Editar</a>
+                        <a href="listarusuarios.phtml" onclick="return confirm('Tens certesa?');">Deletar</a>
+                    </td>
+                </tr>
+            <?php } ?>
         </table>
         <br />
-        <form action="criarusuario.phtml" method="POST">
-            <input type="submit" href="criarusuario.phtml" value="Criar"/>
+        <form action="index.php?page=criarusuario" method="POST">
+            <input type="submit" value="Criar"/>
             <a href="index.phtml">Logout</a>
         </form>
     </body>
