@@ -12,9 +12,9 @@ class LoginAction {
             return;
         }
         
-        $emailPadrao = "admin@ftec.com.br";
-        $senhaPadrao = "123456";
-        if (($email != $emailPadrao) || ($senha != $senhaPadrao)) {
+        $emailAdmin = "admin@ftec.com.br";
+        $senhaAdmin = "123456";
+        if (($email != $emailAdmin) || ($senha != $senhaAdmin)) {
             $mensagem = "Email e/ou senha invalida.";
             require __DIR__ . "/../login.phtml";
             return;
