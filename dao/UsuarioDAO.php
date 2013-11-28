@@ -4,7 +4,6 @@ class UsuarioDAO {
 
     function __construct() {
         \session_start();
-        $ns = $_SESSION["numeros"];
         if (!isset($_SESSION["numeros"])) {
             $ns = array();
             $_SESSION["numeros"] = $ns;

@@ -12,14 +12,12 @@
             <th>Email</th>
             <th>Senha</th>
             <th>Acoes</th>
-            <?php echo $numeros; ?>
             <?php foreach ($numeros as $n): ?>
                 <tr>
                     <td><?php echo $n; ?></td>
                     <td>usuario <?php echo $n; ?></td>
                     <td>senha <?php echo $n; ?></td>
                     <td>
-                        <a href="editarusuario.phtml">Editar</a>
                         <a href="listarusuarios.phtml" onclick="return confirm('Tens certesa?');">Deletar</a>
                     </td>
                 </tr>
