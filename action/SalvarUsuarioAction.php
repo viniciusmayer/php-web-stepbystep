@@ -15,6 +15,7 @@ class SalvarUsuarioAction {
         $usuarioDAO->addNumero($n);
         
         header("Location: index.php?page=listarusuarios");
-        die();
+        require __DIR__ . "/index.php?page=listarusuarios";
+        return;
     }
 }

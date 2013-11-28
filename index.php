@@ -9,6 +9,7 @@ final class Index {
     function loadClass($name) {
         $classes = array(
             'LoginAction' => 'action/LoginAction.php',            
+            'LogoutAction' => 'action/LogoutAction.php',
             'ListarUsuariosAction' => 'action/ListarUsuariosAction.php',
             'CriarUsuarioAction' => 'action/CriarUsuarioAction.php',
             'SalvarUsuarioAction' => 'action/SalvarUsuarioAction.php',
@@ -22,6 +23,10 @@ final class Index {
         switch ($page) {
             case "login":
                 $action = new LoginAction();
+                $action->execute();
+                break;
+            case "logout":
+                $action = new LogoutAction();
                 $action->execute();
                 break;
             case "listarusuarios":

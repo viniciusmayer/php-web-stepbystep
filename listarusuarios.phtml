@@ -12,7 +12,8 @@
             <th>Email</th>
             <th>Senha</th>
             <th>Acoes</th>
-            <?php foreach ($numeros as $n) { ?>
+            <?php echo $numeros; ?>
+            <?php foreach ($numeros as $n): ?>
                 <tr>
                     <td><?php echo $n; ?></td>
                     <td>usuario <?php echo $n; ?></td>
@@ -22,12 +23,12 @@
                         <a href="listarusuarios.phtml" onclick="return confirm('Tens certesa?');">Deletar</a>
                     </td>
                 </tr>
-            <?php } ?>
+            <?php endforeach; ?>
         </table>
         <br />
         <form action="index.php?page=criarusuario" method="POST">
             <input type="submit" value="Criar"/>
-            <a href="index.phtml">Logout</a>
+            <a href="index.php?page=logout">Logout</a>
         </form>
     </body>
 </html>
